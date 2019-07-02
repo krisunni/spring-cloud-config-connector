@@ -1,0 +1,25 @@
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:mule-spring-cloud-config="http://www.mulesoft.org/schema/mule/mule-spring-cloud-config"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/mule-spring-cloud-config http://www.mulesoft.org/schema/mule/mule-spring-cloud-config/current/mule-mule-spring-cloud-config.xsd">
+
+    <mule-spring-cloud-config:config name="config">
+        <mule-spring-cloud-config:connection applicationName="eureka" profiles="dev" label="null" configServerBaseUrl="http://localhost:8888"/>
+    </mule-spring-cloud-config:config>
+
+    <flow name="getProperties">
+        <mule-spring-cloud-config:get-properties config-ref="config"
+                                                 placeholder='"https://github.com/spring-cloud-samples/config-repo/foo.properties"'/>
+    </flow>
+
+</mule>
+
+
+        <!--<mule-spring-cloud-config:config name="Spring_Cloud_Config_Config" configId="configId" >-->
+        <!--        <mule-spring-cloud-config:connection applicationName="eureka" profiles="dev" label="null" configServerBaseUrl="http://localhost:8888"/>-->
+        <!--    </mule-spring-cloud-config:config>-->
+        <!--    <flow name="mule4Flow" doc:id="817f01ca-e031-43dc-8b2b-001a4c43147e" >-->
+        <!--        <mule-spring-cloud-config:get-properties doc:name="Get Properties" doc:id="f1dd6095-d7c5-478e-a7f6-73a60642a9ed" config-ref="Spring_Cloud_Config_Config" placeholder='"https://github.com/spring-cloud-samples/config-repo/foo.properties"'/>-->
+        <!--    </flow>-->
+        <!--</mule>-->

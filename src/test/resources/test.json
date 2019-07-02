@@ -1,0 +1,20 @@
+{
+  "name": "eureka",
+  "profiles": [
+    "dev"
+  ],
+  "label": null,
+  "version": "a611374438e75aa1b9808908c57833480944e1a8",
+  "state": null,
+  "propertySources": [
+    {
+      "name": "https://github.com/spring-cloud-samples/config-repo/application.yml (document #0)",
+      "source": {
+        "info.description": "Spring Cloud Samples",
+        "info.url": "https://github.com/spring-cloud-samples",
+        "eureka.client.serviceUrl.defaultZone": "http://localhost:8761/eureka/",
+        "foo": "baz"
+      }
+    }
+  ]
+}
