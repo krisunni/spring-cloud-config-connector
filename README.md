@@ -12,10 +12,12 @@ mvn clean install
 ```
 To use this extension in your Mule 4 application add the following dependency in `pom.xml`
 ```
-<groupId>com.ku.portfolio</groupId>
-<artifactId>spring-cloud-config-connector</artifactId>
-<version>4.0.0</version>
-<classifier>mule-plugin</classifier>
+<dependency>
+            <groupId>com.ku.portfolio</groupId>
+            <artifactId>spring-cloud-config-connector</artifactId>
+            <version>4.0.0</version>
+            <classifier>mule-plugin</classifier>
+ </dependency>
 ```
 
 [Mule 3 Spring Config Connector]:https://github.com/mulesoft-labs/spring-cloud-config-connector
